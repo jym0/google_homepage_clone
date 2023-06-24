@@ -1,0 +1,351 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+header{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8%;
+    position: relative;
+}
+
+.headernav ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.headernav  ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 0.8rem;
+    font-family: 'Roboto', sans-serif;
+
+}
+.headernav  ul li a:hover{
+    text-decoration: underline;
+}
+.headernav  ul li{
+    display: flex;
+    list-style: none;
+    margin-left: 16px;
+    text-align: center;
+    align-items: center;
+    margin: 8px;
+    padding: 4px;  
+}
+.headernav  ul li svg{
+    height: 22px;
+    width: 22px;
+    color: rgba(82, 80, 80, 0.918);
+    padding: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.headernav  ul li svg:hover{
+    background-color: rgba(128, 128, 128, 0.356);
+    border-radius: 20px;
+}
+
+
+.center{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+.center .centerdiv{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: fit-content;
+    align-items: center;
+}
+.center div .google{
+    width: auto;
+    height: 96px;
+    margin-bottom: 6%;
+}
+.center .search{
+    display: flex;
+    border-radius: 30px;
+    justify-content:  center;
+    margin-bottom: 4%;
+    padding: 13px 6px 13px 10px;
+    width: 550px;
+    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.116);
+}
+.center .search input{
+    width: 80%;
+    border: none;
+}
+.center .search input::placeholder{
+    font-size: 0.96rem;
+    font-family: 'Roboto', sans-serif;
+}
+.center .search input[type="text"]{
+    outline: none;
+}
+.center .search input[type="text"]:focus::placeholder {
+    color: transparent; 
+}
+.center .search img{
+    width: auto;
+    height: 17px;
+    margin-right: 10px;
+    cursor: pointer;
+
+}
+
+.search svg{
+    opacity: 0.7;
+    width: auto;
+    height: 17px;
+    margin-right: 8px;
+}
+
+
+.center2{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+.shortcut{
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-around;
+    width: 34%;
+    padding: 0;
+
+}
+
+.shortcut_apps{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 28px 4px 28px;
+    border-radius: 6px;
+    position: relative;
+}
+.shortcut_apps p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+}
+.shortcut a{
+    text-decoration: none;
+    color: black;
+}
+.shortcut_apps .more_menu{
+    position: absolute;
+    height: 20px;
+    opacity: 0.5;
+    right: 2px;
+    top: 2px;
+    padding: 6px;
+    visibility: hidden;
+}
+.shortcut_apps .more_menu:hover{
+    background-color: rgba(128, 128, 128, 0.295);
+    border-radius: 20px;
+}
+.shortcut img{
+    width: auto;
+    height: 17px;
+}
+.shortcut_apps .img{
+    background-color: rgba(128, 128, 128, 0.164);
+    border-radius: 26px ;
+    padding: 16px 12px 12px 12px;
+}
+.shortcut_apps .fb{
+    width: auto;
+    height: 28px;
+    background-color: rgba(128, 128, 128, 0.164);
+    border-radius: 30px ;
+    padding: 10px 0px 10px 0px;
+}
+.shortcut_apps .add{
+    height: 24px;
+    opacity: 0.8;
+    padding: 10px;
+    background-color: rgba(128, 128, 128, 0.096);
+    border-radius: 26px ;
+}
+
+
+.shortcut_apps:hover{
+    background-color: rgba(128, 128, 128, 0.137);
+    cursor: pointer;
+}
+
+.shortcut_apps:hover .fb, .shortcut_apps:hover .img{
+    background-color: rgba(255, 255, 255, 0.479);
+}
+
+
+aside{
+    width: 20%;
+    position: fixed;
+    right: 4%;
+    top: 10%;
+    background-color: white;
+
+    
+}
+
+.allapps{
+    display: none;
+    justify-content:right;
+    height: 360px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px 20px 10px 20px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.534);
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: white;
+   
+}
+
+.allapps::-webkit-scrollbar{
+    width: 8px;
+   
+}
+
+.allapps::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.329); 
+    border-radius: 14px;
+  
+}
+.rightside{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+    position: relative;
+    background-color: white;
+}
+
+.line{
+    width: 300px;
+    border-top-style: solid;
+    border-width: 1px;
+    border-color: rgba(128, 128, 128, 0.199);
+    position: absolute;
+    left: -20px;
+    top: 423px;
+    
+}
+
+
+.rightside .apps_container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px 0px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: white;
+}
+
+.rightside .apps_container:hover{
+    background-color: #1a73e823;
+}
+.rightside img{
+    width: auto;
+    height: 36px;
+    margin-bottom: 0;
+}
+.rightside p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.rightside .account{
+    width: auto;
+    height: 50px;
+}
+
+.more_apps{
+    padding: 10px 0px 10px 0px;
+    width: 140px;
+    color: #1a73e8;
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    border-color: rgba(128, 128, 128, 0.199);
+    border-width: 1px;
+    border-radius: 6px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 24%;
+    cursor: pointer;
+}
+.more_apps:hover{
+    background-color: #1a73e811 ;
+    border-color: #1a73e828;
+}
+
+
+
+
+.customize{ 
+    display: flex;
+    color: #1a73e8;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    align-items: center;
+    padding: 6px 16px 6px 16px;
+    position: fixed;
+    right: 20px;
+    bottom: 16px;
+    float: right;
+    border-radius: 26px;
+    border: none;
+    box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 1px 2px rgba(0,0,0,.23);
+    cursor: pointer;
+}
+.customize svg{
+    width: 18px;
+    color:#1a73e8;
+    height: auto;
+    margin-right: 8px;
+}
+
+.customize:hover{
+    background-color: #1a73e80a;
+}
+
+
+@media screen and (max-width: 1000px){
+    aside{
+        width: 20% ;
+        right: 5%;
+    }
+
+    
+}
+
+@media screen and (max-width: 900px){
+    aside{
+        width:24% ;
+        right: 6%;
+    }
+
+    
+}
+@media screen and (max-width: 650px){
+    aside{
+        width:30% ;
+        right: 6%;
+    }
+
+    
+}
