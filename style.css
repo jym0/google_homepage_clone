@@ -36,7 +36,7 @@ header{
     margin: 8px;
     padding: 4px;  
 }
-.headernav  ul li svg{
+.a_svg{
     height: 22px;
     width: 22px;
     color: rgba(82, 80, 80, 0.918);
