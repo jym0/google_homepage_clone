@@ -1,3 +1,5 @@
+import { allApps } from "./all-apps.js";
+
 const containers = document.querySelectorAll('.shortcut_apps');
 var timeoutId;
 
@@ -32,22 +34,45 @@ containers.forEach(function(container) {
 
 
 //-------------------------------------------------//
-document.addEventListener("DOMContentLoaded", function() {
-    var container = document.getElementById("allapps_container");
-    var button = document.getElementById("candymenu");
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.getElementById("allapps_container");
+  const button = document.getElementById("candymenu");
 
-    function toggleContainer() {
-      if (container.style.display === "none") {
-        container.style.display = "block";
-      } else {
-        container.style.display = "none";
-      }
+  function isHidden(element) {
+    return window.getComputedStyle(element).display === "none";
+  }
+
+  function toggleContainer() {
+    if (isHidden(container)) {
+      container.style.display = "block";
+    } else {
+      container.style.display = "none";
     }
+  }
 
-    button.addEventListener("click", toggleContainer);
-    document.addEventListener("click", function(event) {
-      if (event.target !== container && event.target !== button) {
-        container.style.display = "none";
-      }
-    });
+  function hideContainer() {
+    if (!isHidden(container)) {
+      container.style.display = "none";
+    }
+  }
+
+  button.addEventListener("click", toggleContainer);
+  document.addEventListener("click", function (event) {
+    if (event.target !== container && event.target !== button) {
+      hideContainer();
+    }
   });
+});
+
+//-         - - - - -- -    - - - -- -     - -//
+let allAppsHTML = '';
+
+allApps.forEach((apps) => {
+  allAppsHTML += ` 
+                <div class="apps_container">
+                    <img src="${apps.image}" alt="" >
+                    <p>${apps.name}</p>
+                </div>`;
+})
+
+document.querySelector('.rightside').innerHTML = allAppsHTML;

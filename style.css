@@ -36,7 +36,7 @@ header{
     margin: 8px;
     padding: 4px;  
 }
-.a_svg{
+.headernav  ul li svg{
     height: 22px;
     width: 22px;
     color: rgba(82, 80, 80, 0.918);
@@ -197,7 +197,8 @@ aside{
 
 .allapps{
     display: none;
-    justify-content:right;
+    justify-content:center;
+    align-items: center;
     height: 360px;
     width: 100%;
     border-radius: 10px;
@@ -206,6 +207,7 @@ aside{
     overflow: hidden;
     overflow-y: scroll;
     background-color: white;
+    position: relative;
    
 }
 
@@ -223,7 +225,6 @@ aside{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.6rem;
-    position: relative;
     background-color: white;
 }
 
@@ -234,7 +235,7 @@ aside{
     border-color: rgba(128, 128, 128, 0.199);
     position: absolute;
     left: -20px;
-    top: 423px;
+    top: 440px;
     
 }
 
@@ -247,9 +248,7 @@ aside{
     padding: 10px 16px 0px 16px;
     border-radius: 10px;
     cursor: pointer;
-    white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
     background-color: white;
 }
 
@@ -264,8 +263,13 @@ aside{
 .rightside p{
     font-family: 'Roboto', sans-serif;
     font-size: 0.9rem;
+    width: 62px;
     margin-top: 6px;
     margin-bottom: 6px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
 }
 
 .rightside .account{
@@ -285,7 +289,7 @@ aside{
     border-radius: 6px;
     margin-top: 30px;
     margin-bottom: 20px;
-    margin-left: 24%;
+    margin-left: 20%;
     cursor: pointer;
 }
 .more_apps:hover{
