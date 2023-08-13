@@ -208,6 +208,7 @@ aside{
     overflow-y: scroll;
     background-color: white;
     position: relative;
+    z-index: 100;
    
 }
 
